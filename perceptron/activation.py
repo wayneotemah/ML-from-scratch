@@ -16,6 +16,6 @@ def sigmoid_function(z):
 
 # Activation function: Linear function (y = c + z)
 def linear_function(z):
-    c = random.random(1)
+    c = random.random()
     # Returns the input array plus .
     return c + z

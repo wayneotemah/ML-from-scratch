@@ -1,30 +1,38 @@
 import random
 import numpy as np
-from . import linear_function
+from .activation import linear_function
 
 
 class perceptron:
     def __init__(self):
         random.seed(1)
-        # Initialize the weight matrix with random values between -1 and 1.
-        # The weight matrix has shape (3, 1) as it corresponds to 3 input features and 1 output.
-
+        """
+        the weight matrix with random values between -1 and 1.
+        The weight matrix has shape (3, 1) as it corresponds to 3 input
+        features and 1 output.
+        """
         self.weight = 2 * random.random() - 1
         self.bias = 0
         self.learning_rate = 0.001
 
     # Forward pass through the perceptron.
     def forward(self, x, activation=linear_function):
-        # Calculate the dot product of input "x" and the weight matrix "self.weight".
+        """
+        # Calculate the dot product of input "x" and the weight matrix
+        "self.weight".
         # Then, add the bias "self.bias".
         # Finally, apply the linear activation function.
+        """
         y_ = np.dot(x, self.weight) + self.bias
         return activation(y_)
 
     # Update rule for the perceptron during training.
     def update_rule(self, y, y_, X):
-        # Calculate the change in prediction (y - y_) and update the weight and bias
+        """
+        # Calculate the change in prediction (y - y_) and update the weight
+        and bias
         # using the learning rate and the input "X".
+        """
         change = y - y_
         self.weight = self.weight + self.learning_rate * (change) * X
         self.bias = self.bias + self.learning_rate * (change)
