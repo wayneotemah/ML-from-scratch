@@ -19,5 +19,3 @@ def linear_function(z):
     c = random.random(1)
     # Returns the input array plus .
     return c + z
-
-
