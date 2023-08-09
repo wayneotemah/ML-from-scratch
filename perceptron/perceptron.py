@@ -9,7 +9,7 @@ class perceptron:
         # Initialize the weight matrix with random values between -1 and 1.
         # The weight matrix has shape (3, 1) as it corresponds to 3 input features and 1 output.
 
-        self.weight = 2 * random.random((1)) - 1
+        self.weight = 2 * random.random() - 1
         self.bias = 0
         self.learning_rate = 0.001
 
