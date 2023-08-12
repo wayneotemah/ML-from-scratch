@@ -1,6 +1,6 @@
 import random
 import numpy as np
-from .activation import linear_function
+from activation import linear_function
 
 
 class perceptron:

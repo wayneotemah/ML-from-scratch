@@ -19,3 +19,11 @@ def linear_function(z):
     c = random.random()
     # Returns the input array plus .
     return c + z
+
+
+# Activation derivative
+
+
+def sigmoid_derivative(x):
+    # Returns the derivative of the sigmoid activation function.
+    return x * (1 - x)
